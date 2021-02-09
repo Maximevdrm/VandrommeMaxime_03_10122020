@@ -1,0 +1,19 @@
+{
+  "name": "vandrommemaxime_03_10122020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./Sass/main.scss:./Css/Style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maximevdrm/VandrommeMaxime_03_10122020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maximevdrm/VandrommeMaxime_03_10122020/issues"
+  },
+  "homepage": "https://github.com/Maximevdrm/VandrommeMaxime_03_10122020#readme"
+}
