@@ -1,0 +1,286 @@
+/** Page d'accueil **/
+$couleur-primaire: #9356DC;
+$couleur-secondaire: #FF79DA;
+$couleur-tertiaire: #99E2D0;
+$couleur-bg:#f6f6f6;
+$couleur-txt: #353535;
+$couleur-new: #99e2d0;
+$couleur-new_txt: #008766;
+
+
+body{
+    margin: 0 0 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-family: 'Shrikhand', cursive;
+}
+header{
+    padding: 5% 0 3% 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    & img{
+        width: 40%;
+    }
+    & a{
+        color: $couleur-txt;
+    }
+}
+.localisation{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color: #eaeaea;
+    color: $couleur-txt;
+    box-shadow: 0px 3px 4px 0  #cecece inset;
+    font-weight: lighter;
+    font-size: 0.9em;
+    & i{
+        padding-right: 3%;
+    }
+}
+.presentation{
+    background-color: $couleur-bg;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15%;
+    &__slogan{
+        & h2{
+            padding-top: 8%;
+            font-weight: bolder;
+            width: 70%;
+            text-align: center;
+            margin: auto;
+        }
+        & p{
+            font-weight: lighter;
+            color: grey;
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            padding: 5% 0 5% 0;
+        }
+    }
+    & a{
+        background: linear-gradient(to bottom right, $couleur-secondaire, $couleur-primaire);
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        border-radius: 5em;
+        text-decoration: none;
+        box-shadow: #9e9e9e 2px 4px 12px;
+        & p{
+            color: white;
+        }
+    }
+}
+.etape{
+    padding: 5% 0 5% 5%;
+    &__block:nth-child(6) {
+        background-color: #f5edff;
+        & i{
+            color: $couleur-primaire;
+        }
+    }
+    &__block{
+        width: 85%;
+        background-color: $couleur-bg;
+        display: flex;
+        align-items: baseline;
+        padding: 4% 0 4% 10%;
+        border-radius: 1.5em;
+        font-weight: lighter;
+        font-size: 0.9em;
+        margin-bottom: -2em;
+        box-shadow: #cecece 2px 4px 12px;
+        & h3{
+            padding-left: 5%;
+            font-weight: bold;
+        }
+        & i{
+            color: grey;
+            font-size: 1.2em;
+        }
+    }
+    &__chiffre{
+        background-color: $couleur-primaire;
+        width: 7%;
+        text-align: center;
+        border-radius: 5em;
+        position: relative;
+        top: -2.3em; left: -0.7em;
+        & p{
+            padding: 18% 0 18% 0;
+            color: white;
+            font-size: 0.8em;
+        }
+    }
+}
+#restau{
+    background-color: $couleur-bg;
+    padding: 1em 0 3em 0;
+    & a{
+        text-decoration: none;
+    }
+    & h2{
+        padding: 0 0 0 8%;
+    }
+}
+.restau{
+    width: 85%;
+    margin: auto;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 4px 4px 8px #c5c5c5;
+    &__img{
+        & img{
+            width: 100%;
+            height: 10em;
+            object-fit: cover;
+            object-position: 0em 0em;
+            border-radius: 1em 1em 0 0 ;
+        }
+    }
+    &__titre{
+        height: 3em;
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        grid-template-rows: 40% 40%;
+        row-gap: 0.5em;
+        padding: 0 0 10% 5%;
+        margin-bottom: 8%;
+        & h3{
+            color: $couleur-txt;
+            grid-column: 1;
+        }
+        & p{
+            color: $couleur-txt;
+            grid-column: 1;
+        }
+        & i{
+            color: $couleur-txt;
+            grid-column: 2;
+            padding-left: 10%;
+            font-size: 1.5em;
+        }
+    }
+    &__new{
+        text-decoration: none;
+        color: $couleur-new_txt;
+        background-color: $couleur-new;
+        width: 25%;
+        text-align: center;
+        border-radius: 3px;
+        position: relative;
+        top: -16em; left: 14.3em;
+        & h4{
+            padding: 10% 0 10% 0;
+            font-weight: lighter;
+            font-size: 0.8em;
+        }
+    }
+}
+.banniere{
+    & img{
+        width: 100%;
+        height: 15em;
+        object-fit: cover;
+    }
+}
+.menu{
+    background-color: $couleur-bg;
+    border-radius: 2.5em 2.5em 0 0;
+    margin-top: -3em;
+    position: relative;
+    padding: 0 1em 1em 1em;
+    &__restau{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+        & h1{
+            font-size: 1.8em;
+            font-weight: lighter;
+        }
+        & i{
+            font-size: 1.4em;
+            font-weight: lighter;
+        }
+    }
+    &__titre{
+        text-transform: uppercase;
+        font-weight: lighter;
+        color: $couleur-txt;
+        & span{
+            border-bottom: $couleur-tertiaire 3px solid;
+            padding-bottom: 0.2em;
+        }
+    }
+    &__plat{
+        background-color: white;
+        border-radius: 1em;
+        padding: 1em 0em 0em 1em;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: baseline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 1em;
+        box-shadow: #dbdbdb 2px 4px 12px;
+        cursor: pointer;
+        & h4{
+            width: 100%;
+            margin: 0 0 0 0;
+            font-size: 1em;
+        }
+        & p{
+            margin: 0 0 0 0;
+            font-size: 0.9em;
+            font-weight: lighter;
+            padding: 0.5em 0 0 0;
+        }
+        &--prix{
+            margin: 0 0 0 0;
+            text-align: end;
+            padding: 0 1em 0 0;
+            font-size: 1em;
+        }
+    }
+}
+.btn__commander{
+        background: linear-gradient(to bottom right, $couleur-secondaire, $couleur-primaire);
+        width: 60%;
+        text-align: center;
+        border-radius: 5em;
+        text-decoration: none;
+        box-shadow: #9e9e9e 2px 4px 12px;
+        position: relative;
+        padding: 3px 0 3px 0;
+        margin: 3em auto 3em auto;
+        & p{
+            color: white;
+        }
+    
+}
+a{
+    text-decoration: none;
+}
+footer{
+    background-color: #353535;
+    color: white;
+    padding: 5% 0 5% 0;
+    & ul{
+        list-style-type:none;
+        & li{
+            padding-bottom: 3%;
+            & a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    & h1{
+        font-size: 1.4em;
+        padding: 0 0 0 10%;
+    }
+}
