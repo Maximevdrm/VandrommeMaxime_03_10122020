@@ -172,8 +172,8 @@ header{
         width: 25%;
         text-align: center;
         border-radius: 3px;
-        position: relative;
-        top: -16em; left: 14.3em;
+        position: absolute;
+        right: 0em;
         & h4{
             padding: 10% 0 10% 0;
             font-weight: lighter;
