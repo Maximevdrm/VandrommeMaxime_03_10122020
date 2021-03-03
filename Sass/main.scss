@@ -1,4 +1,3 @@
-/** Page d'accueil **/
 $couleur-primaire: #9356DC;
 $couleur-secondaire: #FF79DA;
 $couleur-tertiaire: #99E2D0;
@@ -6,7 +5,6 @@ $couleur-bg:#f6f6f6;
 $couleur-txt: #353535;
 $couleur-new: #99e2d0;
 $couleur-new_txt: #008766;
-
 
 body{
     margin: 0 0 0 0;
@@ -133,6 +131,7 @@ header{
     background-color: white;
     border-radius: 1em;
     box-shadow: 4px 4px 8px #c5c5c5;
+    position: relative;
     &__img{
         & img{
             width: 100%;
@@ -143,25 +142,23 @@ header{
         }
     }
     &__titre{
-        height: 3em;
-        display: grid;
-        grid-template-columns: 5fr 1fr;
-        grid-template-rows: 40% 40%;
-        row-gap: 0.5em;
+        height: 2em;
+        display: flex;
+        flex-wrap: wrap;
         padding: 0 0 10% 5%;
         margin-bottom: 8%;
         & h3{
             color: $couleur-txt;
-            grid-column: 1;
+            width: 100%;
+            height: 50%;
+            margin: 1% 0 0 0;
         }
         & p{
             color: $couleur-txt;
-            grid-column: 1;
+            width: 85%;
         }
         & i{
             color: $couleur-txt;
-            grid-column: 2;
-            padding-left: 10%;
             font-size: 1.5em;
         }
     }
@@ -169,13 +166,14 @@ header{
         text-decoration: none;
         color: $couleur-new_txt;
         background-color: $couleur-new;
-        width: 25%;
+        width: 70px;
         text-align: center;
         border-radius: 3px;
+        vertical-align: center;
         position: absolute;
-        right: 0em;
-        & h4{
-            padding: 10% 0 10% 0;
+        top: 10px;
+        right: 10px;
+        & p, h4{
             font-weight: lighter;
             font-size: 0.8em;
         }
@@ -219,31 +217,36 @@ header{
     &__plat{
         background-color: white;
         border-radius: 1em;
-        padding: 1em 0em 0em 1em;
-        display: flex;
-        flex-wrap: wrap;
-        align-self: baseline;
+        padding: 1em 0em 0 1em;
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+        grid-template-rows: 1fr 1fr;
         overflow: hidden;
         text-overflow: ellipsis;
         margin-bottom: 1em;
         box-shadow: #dbdbdb 2px 4px 12px;
         cursor: pointer;
-        & h4{
+        &--nom{
             width: 100%;
-            margin: 0 0 0 0;
+            margin: 0 0 5% 0;
             font-size: 1em;
+            grid-column: 1;
+            grid-row: 1;
         }
-        & p{
+        &--description{
             margin: 0 0 0 0;
             font-size: 0.9em;
             font-weight: lighter;
-            padding: 0.5em 0 0 0;
+            grid-column: 1;
+            grid-row: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &--prix{
             margin: 0 0 0 0;
-            text-align: end;
-            padding: 0 1em 0 0;
             font-size: 1em;
+            grid-column: 2;
+            grid-row: 2;
         }
     }
 }
@@ -283,4 +286,90 @@ footer{
         font-size: 1.4em;
         padding: 0 0 0 10%;
     }
+}
+/* Animations */
+
+.loader{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: $couleur-bg;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 95%;
+    animation: fondu 3s ease-out infinite;
+    &__lettre{
+        color: $couleur-primaire;
+        font-size: 40px;
+        letter-spacing: 8px;
+        font-weight: bold;
+        animation: chargement 2s linear infinite;
+        text-transform: uppercase;
+    }
+}
+@keyframes chargement {
+    0%{
+        color: $couleur-secondaire;
+        text-shadow: 0 0 3px $couleur-secondaire;
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+    40%{
+        transform: translateY(0px);
+    }
+    50%{
+        color: $couleur-primaire;
+        text-shadow: 0 0 3px $couleur-primaire;
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    100%{
+        color: $couleur-secondaire;
+        text-shadow: 0 0 3px $couleur-secondaire;
+        transform: translateY(0px);
+    }
+}
+@keyframes fondu {
+    0%{
+        opacity: 95%;
+    }
+    75%{
+        opacity: 95%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+.loader__lettre:nth-child(1){
+    animation-delay: 0.1s;
+}
+.loader__lettre:nth-child(2){
+    animation-delay: 0.2s;
+}
+.loader__lettre:nth-child(3){
+    animation-delay: 0.3s;
+}
+.loader__lettre:nth-child(4){
+    animation-delay: 0.4s;
+}
+.loader__lettre:nth-child(5){
+    animation-delay: 0.5s;
+}
+.loader__lettre:nth-child(6){
+    animation-delay: 0.6s;
+}
+.loader__lettre:nth-child(7){
+    animation-delay: 0.7s;
+}
+.loader__lettre:nth-child(8){
+    animation-delay: 0.8s;
+}
+.loader__lettre:nth-child(9){
+    animation-delay: 0.9s;
 }
