@@ -6,8 +6,8 @@
     <title>OhMyFood!</title>
     <script src="https://kit.fontawesome.com/fae489cce8.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet" />
   </head>
 
   <body>
@@ -17,10 +17,7 @@
     </header>
 
     <div class="banniere">
-      <img
-        src="./restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-        alt="La_palette_du_gout"
-      />
+      <img src="./restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La_palette_du_gout" />
     </div>
 
     <div class="menu">
@@ -31,10 +28,12 @@
       <div class="menu__entre">
         <h3 class="menu__titre"><span>Entr</span>ées</h3>
         <div class="menu__plat">
-          <h4 class="menu__plat--nom">Fricassée d'escargot</h4>
-          <p class="menu__plat--description">Au piment d'Espelette</p>
-          <h4 class="menu__plat--prix">25€</h4>
-          <i class="fas fa-check-circle"></i>
+          <div class="menu__plat--ecriture">
+            <h4 class="menu__plat--nom">Fricassée d'escargot</h4>
+            <p class="menu__plat--description">Au piment d'Espelette</p>
+            <h4 class="menu__plat--prix">25€</h4>
+          </div>
+          <div class="menu__plat--encoche"><i class="fas fa-check-circle"></i></div>
         </div>
         <div class="menu__plat">
           <h4 class="menu__plat--nom">Foie gras de canard mi-cuit</h4>
@@ -94,9 +93,11 @@
         </div>
       </div>
 
-      <a href="#"><div class="btn__commander">
-        <p>Commander</p>
-      </div></a>
+      <a href="#"
+        ><div class="btn__commander">
+          <p>Commander</p>
+        </div></a
+      >
     </div>
 
     <footer>

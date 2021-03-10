@@ -233,16 +233,27 @@ header{
     &__plat{
         background-color: white;
         border-radius: 1em;
-        padding: 1em 0em 0 1em;
-        display: grid;
-        grid-template-columns: 6fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        display: flex;
         overflow: hidden;
         text-overflow: ellipsis;
         margin-bottom: 1em;
         box-shadow: #dbdbdb 2px 4px 12px;
         cursor: pointer;
-        position: relative;
+        &:hover > .menu__plat--encoche{
+            transition: ease-in-out width 400ms;
+            width: 2em;
+        }
+        &:hover i{
+            transition: transform ease-out 600ms;
+            transform: rotate(360deg);
+        }
+        &--ecriture{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            width: 100%;
+            padding: 0.7em;
+        }
         &--nom{
             width: 100%;
             margin: 0 0 5% 0;
@@ -264,19 +275,22 @@ header{
             font-size: 1em;
             grid-column: 2;
             grid-row: 2;
+            text-align: end;
         }
-        & i{
+        &--encoche{
             background-color: $couleur-tertiaire;
             color: white;
-            height: 3em;
-            width: 2em;
+            width: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 170%;
+            font-size: 2em;
+            &:hover{
+                width: 2em;
+            }
+            & i{
+                overflow: hidden;
+            }
         }
     }
 }
