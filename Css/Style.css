@@ -225,11 +225,11 @@ header a {
   box-shadow: #dbdbdb 2px 4px 12px;
   cursor: pointer;
 }
-.menu__plat:active > .menu__plat--encoche {
+.menu__plat:hover > .menu__plat--encoche {
   transition: ease-in-out width 200ms;
   width: 2em;
 }
-.menu__plat:active i {
+.menu__plat:hover i {
   transition: transform ease-in-out 400ms;
   transform: rotate(360deg);
 }
@@ -246,6 +246,9 @@ header a {
   font-size: 1em;
   grid-column: 1;
   grid-row: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__plat--description {
   margin: 0 0 0 0;
@@ -255,6 +258,7 @@ header a {
   grid-row: 2;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__plat--prix {
   margin: 0 0 0 0;
