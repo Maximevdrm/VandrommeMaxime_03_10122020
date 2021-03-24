@@ -635,6 +635,11 @@ footer h1 {
     margin: auto;
   }
 
+  .fas.fa-heart:hover {
+    color: #FF79DA;
+    font-weight: bolder;
+  }
+
   .btn__commander {
     width: 20%;
     margin: auto;

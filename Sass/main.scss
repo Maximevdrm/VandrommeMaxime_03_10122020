@@ -619,6 +619,12 @@ footer{
             margin: auto;
         }  
     }
+    .fas.fa-heart{
+        &:hover{
+            color: $couleur-secondaire;
+            font-weight: bolder;
+        }
+    }
     .btn__commander{
         width: 20%;
         margin: auto;
